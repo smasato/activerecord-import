@@ -35,19 +35,29 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-          - 3.3
+          - 3.4
         env:
           - AR_VERSION: '8.0'
-            RUBYOPT: --enable-frozen-string-literal
           - AR_VERSION: '7.2'
-            RUBYOPT: --enable-frozen-string-literal
           - AR_VERSION: '7.1'
-            RUBYOPT: --enable-frozen-string-literal
           - AR_VERSION: '7.0'
-            RUBYOPT: --enable-frozen-string-literal
-          - AR_VERSION: 6.1
-            RUBYOPT: --enable-frozen-string-literal
+          - AR_VERSION: '6.1'
         include:
+          - ruby: 3.3
+            env:
+              AR_VERSION: '8.0'
+          - ruby: 3.3
+            env:
+              AR_VERSION: '7.2'
+          - ruby: 3.3
+            env:
+              AR_VERSION: '7.1'
+          - ruby: 3.3
+            env:
+              AR_VERSION: '7.0'
+          - ruby: 3.3
+            env:
+              AR_VERSION: 6.1
           - ruby: 3.2
             env:
               AR_VERSION: '8.0'
